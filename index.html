@@ -658,34 +658,12 @@
           />
         `;
 
+        // Ensure container is visible (in case data-animate hasn't fired yet)
+        caseStudiesTextContainer.classList.add("in");
         // Trigger reflow & re-animate
         caseStudiesTextContainer.classList.remove("animate-fade-in");
         void caseStudiesTextContainer.offsetWidth; // force reflow
         caseStudiesTextContainer.classList.add("animate-fade-in");
-      }
-
-      // Load published posts from localStorage — merge with defaults
-      const saved = localStorage.getItem("kbiz_posts");
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          const publishedPosts = parsed.filter(function(p) { return p.status === "published"; });
-          if (publishedPosts.length > 0) {
-            const customSlides = publishedPosts.map(function(p) {
-              return {
-                eyebrow: p.tags ? p.tags.split(",")[0].toUpperCase().trim() : "CASE STUDIES",
-                title: p.title,
-                description: p.excerpt || (p.content ? p.content.slice(0, 150) + "..." : "No description available."),
-                image: p.coverImage || "public/images/blog-busan.jpg",
-                href: "projects.html",
-              };
-            });
-            // Prepend custom posts, keep defaults at the end
-            slidesList = customSlides.concat(defaultSlides);
-          }
-        } catch (e) {
-          console.error("Failed to parse LocalStorage posts:", e);
-        }
       }
 
       updateCaseStudies();
