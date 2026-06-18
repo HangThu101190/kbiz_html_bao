@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment Consulting | K-Biz Consulting</title>
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Montserrat", "Inter", "system-ui", "sans-serif"] },
+        },
+      },
+    };
+  </script>
+  <script src="public/js/shared.js" defer></script>
+  <script src="public/js/read-more-page.js" defer></script>
+</head>
+<body class="bg-white antialiased text-[#0C0C0C]">
+  <div class="flex w-full flex-col font-sans">
+    <div id="header-mount"></div>
+    <main class="w-full bg-white flex flex-col items-center">
+      <div id="read-more-mount"></div>
+    </main>
+    <div id="footer-mount"></div>
+  </div>
+  <script>
+    window.READ_MORE_CONFIG = {
+      categoryTitle: "INVESTMENT CONSULTING",
+      headline: "K-Biz: Investment guidance, value growth",
+      intro: "We offer in-depth investment consulting services, ensuring your projects are feasible, profitable, and legally compliant. From initial concept to full implementation, K-Biz is with you every step of the way, helping you achieve sustainable investment goals.",
+      backLink: { href: "services.html", label: "Back to Services" },
+      sections: [
+        {
+          title: "1. Investment Certificate Applications",
+          body: "<ul class=\"list-disc space-y-4 pl-5\"><li>Applying for an Investment Registration Certificate depends on various factors such as the project objectives, location and area of land, construction scale, capital sources, technology, environmental impact, and more. A clear and legally compliant business plan is a key factor.</li><li>Our experts assist you in developing a feasibility study that aligns with your business plan and complies with all relevant laws and regulations.</li><li>K-Biz has successfully supported numerous clients in obtaining their Investment Registration Certificates for significant projects, including: <em>The project of manufacture and supply construction materials and services at Song Cau industrial zone (Vietnamese investor, 2024); The project of operation and maintenance for The Van Phong 1 Coal Power Plan (Korean Investor, 2020).</em></li></ul>",
+          image: "public/images/indus.jpg",
+          imageAlt: "Industrial complex"
+        },
+        {
+          title: "2. Prepare Business Plan",
+          body: "<p class=\"text-justify\">Business plans serve various purposes. At K-Biz, we frequently prepare business plans for two key objectives: <strong>(1) obtaining investment certificates,</strong> and <strong>(2) securing bank loans.</strong></p><p>Both types of business plans guarantee full legal compliance, ensuring your project is stable and easy to implement. With over 20 years of experience, we offer comprehensive support from documentation to successful project execution.</p><p>Several business plans developed by K-Biz have been successfully implemented:</p><ul class=\"list-disc space-y-4 pl-5\"><li>To purchase and install medical equipment for Khanh Hoa Provincial General Hospital (<em>Source of capital: The Khanh Hoa investment fund and Vietcombank Khanh Hoa (2016-2017); The Vietin bank - Khanh Hoa branch (2017-2018).</em>).</li><li>To purchase and install medical equipment for Sai Gon – Nha Trang General Hospital (<em>Source of capital: The Khanh Hoa investment fund – Word Bank, 2016-2017</em>).</li></ul>",
+          image: "public/images/plan.jpg",
+          imageAlt: "Business planning documents"
+        },
+        {
+          title: "3. Investment Development Support Services",
+          body: "<ul class=\"list-disc space-y-4 pl-5\"><li>Developing a successful project requires a thorough understanding of various legal and regulatory requirements. These include land use regulations, property leasing laws, construction permits, environmental compliance, taxation, accounting, import-export, project management, human resources, and business operations.</li><li>To assist project owners in navigating these complexities, K-Biz offers specialized support services, including: Tax exemption policy advice, Foreigner employment support, Foreign capital borrowing and transfer, Retainer services.</li></ul>",
+          image: "public/images/financial-planning-analysis.webp",
+          imageAlt: "Financial planning and analysis"
+        }
+      ]
+    };
+  </script>
+</body>
+</html>

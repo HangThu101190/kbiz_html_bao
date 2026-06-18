@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i '' 's|\\\\.\\\\./public/|public/|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "Bash(sed -i '' 's|href=\"home\\\\.html\"|href=\"index.html\"|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "Bash(sed -i '' 's|href=\"services\\\\.html\"|href=\"htmls/services.html\"|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "Bash(sed -i '' 's|href=\"services-consulting-1\\\\.html\"|href=\"htmls/services-consulting-1.html\"|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "Bash(sed -i '' 's|href=\"services-consulting-2\\\\.html\"|href=\"htmls/services-consulting-2.html\"|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "Bash(cp /Users/b/Downloads/kbiz-html/htmls/*.html /Users/b/Downloads/kbiz-html/)",
+      "Bash(cp -r /Users/b/Downloads/kbiz-html/htmls/admins /Users/b/Downloads/kbiz-html/)",
+      "Bash(sed -i '' 's|href=\"htmls/|href=\"|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "Bash(sed -i '' 's|href: \"htmls/|href: \"|g' /Users/b/Downloads/kbiz-html/index.html)",
+      "WebFetch(domain:5thepassionfruitde.wixstudio.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sed -i '' 's|src=\"/public/js/shared.js\"|src=\"public/js/shared.js\"|g' /Users/b/Downloads/kbiz-html/*.html && echo \"Done\")",
+      "Bash(curl -sL \"https://static.wixstatic.com/media/f6985b_6be73d5426024050874a372da5a42773~mv2.jpg/v1/fill/w_900,h_600,fp_0.50_0.64,q_85,enc_auto/dam-market-nha-trang.jpg\" -o \"market-dam-nhatrang.jpg\")",
+      "Bash(curl -sL \"https://static.wixstatic.com/media/f6985b_3d30378a3a75474888339b403d424371~mv2.jpg/v1/fill/w_900,h_600,q_85,enc_auto/market-vietnam-2.jpg\" -o \"market-vietnam-vendors.jpg\")",
+      "Bash(curl -sL \"https://static.wixstatic.com/media/f6985b_cb5f6e244a5946f88ae3c5e2231384fd~mv2.jpg/v1/fill/w_900,h_600,q_85,enc_auto/market-vietnam-3.jpg\" -o \"market-vietnam-stalls.jpg\")",
+      "Bash(curl -sL \"https://static.wixstatic.com/media/f6985b_24e3dbfaf84240c980dcdfc27456b3b5~mv2.webp/v1/fill/w_900,h_600,q_85,enc_auto/supermarket-vs-market.webp\" -o \"market-supermarket-compare.jpg\")",
+      "Bash(curl -sL \"https://static.wixstatic.com/media/f6985b_6048710ecd484e849d10d9f82640a205~mv2.jpg/v1/fill/w_900,h_600,q_85,enc_auto/market-shoppers.jpg\" -o \"market-shoppers.jpg\")"
+    ]
+  }
+}
