@@ -479,7 +479,7 @@
           <!-- Left Column: giant text and overlay description -->
           <div class="relative flex items-center justify-center min-h-[420px] lg:col-span-7 w-full" data-animate>
             <!-- Behind: giant text -->
-            <div class="absolute inset-0 flex flex-col justify-center items-center pointer-events-none select-none z-0">
+            <div class="absolute inset-0 flex flex-col justify-center items-center pointer-events-none select-none z-0" style="padding-left: 18%;">
               <span class="text-[72px] md:text-[100px] lg:text-[115px] font-black leading-[0.95] text-[#B800FF] tracking-tight text-center">
                 MEET<br />OUR<br />EXPERT
               </span>
@@ -520,7 +520,7 @@
               <!-- Expert portrait image -->
               <img
                 id="expert-img"
-                src="public/images/team-huynh-thi-hang.png"
+                src="public/images/avatar-hang.png"
                 alt="Huỳnh Thị Hằng"
                 class="absolute inset-0 h-full w-full object-cover z-10"
               />
@@ -658,32 +658,12 @@
           />
         `;
 
+        // Ensure container is visible (in case data-animate hasn't fired yet)
+        caseStudiesTextContainer.classList.add("in");
         // Trigger reflow & re-animate
         caseStudiesTextContainer.classList.remove("animate-fade-in");
         void caseStudiesTextContainer.offsetWidth; // force reflow
         caseStudiesTextContainer.classList.add("animate-fade-in");
-      }
-
-      // Load published posts from localStorage if present
-      const saved = localStorage.getItem("kbiz_posts");
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          const publishedPosts = parsed.filter(function(p) { return p.status === "published"; });
-          if (publishedPosts.length > 0) {
-            slidesList = publishedPosts.map(function(p) {
-              return {
-                eyebrow: p.tags ? p.tags.split(",")[0].toUpperCase().trim() : "CASE STUDIES",
-                title: p.title,
-                description: p.excerpt || (p.content ? p.content.slice(0, 150) + "..." : "No description available."),
-                image: p.coverImage || "public/images/blog-busan.jpg",
-                href: "/projects.html",
-              };
-            });
-          }
-        } catch (e) {
-          console.error("Failed to parse LocalStorage posts:", e);
-        }
       }
 
       updateCaseStudies();
@@ -846,36 +826,12 @@
       // 4. SLIDER 4: TEAM / EXPERTS
       // ==========================================
       const teamMembers = [
-        {
-          name: "Huỳnh Thị Hằng",
-          role: "Head of Investment Advisory Department – Co-founder",
-          image: "/public/images/team-huynh-thi-hang.png",
-        },
-        {
-          name: "Nguyễn Trần Khánh Hiệp",
-          role: "Project Development Department",
-          image: "/public/images/team-khanh-hiep.png",
-        },
-        {
-          name: "Từ Ngọc Thùy Nhi",
-          role: "Accounting & Tax Department",
-          image: "/public/images/team-thuy-nhi.png",
-        },
-        {
-          name: "Hà Thái Sơn",
-          role: "Legal Department",
-          image: "/public/images/team-thai-son.png",
-        },
-        {
-          name: "Nguyễn Thị Hải Anh",
-          role: "Startup Management Support Department",
-          image: "/public/images/team-hai-anh.png",
-        },
-        {
-          name: "Bùi Kim Khánh",
-          role: "Legal Department",
-          image: "/public/images/team-kim-khanh.png",
-        },
+        { name: "Huỳnh Thị Hằng",        image: "public/images/avatar-hang.png"  },
+        { name: "Nguyễn Trần Khánh Hiệp", image: "public/images/avatar-hiep.png"  },
+        { name: "Từ Ngọc Thùy Nhi",       image: "public/images/avatar-nhi.png"   },
+        { name: "Hà Thái Sơn",            image: "public/images/avatar-son.png"   },
+        { name: "Nguyễn Thị Hải Anh",     image: "public/images/avatar-anh.png"   },
+        { name: "Bùi Kim Khánh",          image: "public/images/avatar-khanh.png" },
       ];
 
       let currentExpert = 0;

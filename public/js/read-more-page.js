@@ -14,23 +14,14 @@
   function renderIntro(config) {
     return (
       '<section class="w-full">' +
-      '<div class="flex w-full">' +
-      '<div class="w-[8.5%] shrink-0 bg-[#B912FC]"></div>' +
-      '<div class="flex-1 py-8 pl-8 md:py-10 md:pl-10" style="background: linear-gradient(90deg, #7B00AA 0%, #B800FF 100%);">' +
-      '<h1 class="text-[28px] font-bold uppercase leading-normal tracking-normal text-white md:text-[40px] lg:text-[50px] hero-animate">' +
-      esc(config.categoryTitle) +
-      '</h1></div>' +
-      '<div class="w-[8.5%] shrink-0 bg-[#F0EBF1]"></div></div>' +
-      '<div class="flex w-full">' +
-      '<div class="w-[8.5%] shrink-0 bg-white"></div>' +
-      '<div class="flex-1 bg-[#E8FFF3] py-10 pl-8 md:py-12 md:pl-10">' +
-      '<h2 class="mb-6 text-[25px] font-bold leading-normal tracking-[0.01em] text-[#3D0055] md:text-[32px] lg:text-[40px] hero-animate hero-animate-delay-1">' +
+      '<div class="w-full px-8 py-12 md:px-16 md:py-16 lg:px-24" style="background: linear-gradient(90deg, #7B00AA 0%, #B800FF 100%);">' +
+      '<h1 class="text-[28px] font-bold leading-tight text-white md:text-[40px] lg:text-[50px] hero-animate">' +
       esc(config.headline) +
-      '</h2>' +
-      '<p class="text-lg leading-[1.6] text-[#000000] pr-8 md:pr-10 hero-animate hero-animate-delay-2">' +
+      '</h1></div>' +
+      '<div class="w-full bg-[#E8FFF3] px-8 py-10 md:px-16 md:py-12 lg:px-24">' +
+      '<div class="max-w-4xl text-base leading-[1.8] text-[#0C0C0C] space-y-5 hero-animate hero-animate-delay-1">' +
       config.intro +
-      '</p></div>' +
-      '<div class="w-[8.5%] shrink-0 bg-white"></div></div></section>'
+      '</div></div></section>'
     );
   }
 
@@ -71,7 +62,7 @@
         '</div>'
       : '';
     return (
-      '<div class="flex flex-col justify-center px-6 py-12 md:px-16 md:py-20 lg:px-24 lg:py-28 ' +
+      '<div class="flex flex-col justify-start px-6 py-10 md:px-12 md:py-12 lg:px-16 lg:py-14 ' +
       bg +
       '">' +
       lead +
